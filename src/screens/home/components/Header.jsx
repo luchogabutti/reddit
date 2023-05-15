@@ -1,17 +1,15 @@
 import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
-export default function SearchAppBar() {
+const Header = () => {
   return (
     <Box>
-      <AppBar color='background'>
+      <AppBar color='background' position='relative'>
         <Toolbar>
-        <Typography
+          <Typography
             className='header'
             fontSize='25px'
             color='primary'
@@ -25,3 +23,5 @@ export default function SearchAppBar() {
     </Box>
   );
 }
+
+export default Header;
