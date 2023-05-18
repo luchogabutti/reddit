@@ -13,7 +13,7 @@ const theme = createTheme({
       main:'#f1d33d', 
     },
     background: {
-      main: '#fff'
+      main: '#fff',
     }
   },
 });
@@ -22,9 +22,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
       <Home/>
-    </div>
     </ThemeProvider>
   );
 }

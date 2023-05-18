@@ -24,7 +24,7 @@ const Articles = () => {
     }, []);
 
     return (
-        <div className='articles'>
+        <div className="articles-container" color="secondary">
             {articles && articles.map(article => <Article key={article.id} article={article.data} />)}
         </div>
     )
