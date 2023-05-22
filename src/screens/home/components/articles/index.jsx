@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Article from "./Article";
 
-
 const Articles = () => {
 
     const [articles, setArticles] = useState([]);
