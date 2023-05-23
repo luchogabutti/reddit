@@ -1,20 +1,17 @@
 import React from "react";
 import './style.css'
 
-const Subreddit = () => {
-    return (
+const Subreddit = (props) => {
 
-        <div className="subreddits"> 
-            <h2>Subreddits</h2>
-            <ul>
-                <li>Hola</li>
-                <li>aweA</li>
-                <li>as</li>
-                <li>eawd</li>
-                <li>eawd</li>
-            </ul>
-        </div>
-        
+    const {title, icon_img} = props.subreddit
+
+    return (
+        <div className="subreddits">
+            <div className="subreddit-container">
+            <img src={icon_img}/>
+            <h3>{title}</h3>
+            </div>
+        </div>  
     )
 }
 
