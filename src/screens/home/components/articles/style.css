@@ -1,0 +1,42 @@
+.articles-container {
+    margin-left: 10px;
+  }
+  
+.articles {
+    background: #fff;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 70%;
+    margin-left: 15px;
+    overflow: hidden;
+}
+  
+.articles img {
+    text-align: center;
+    border-radius: 20px;
+    width: 95%;
+    height: 650px;
+}
+  
+  
+.article-props {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+.articles a {
+    color: rgb(68, 68, 68);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.articles a:hover {
+    text-decoration: underline;
+}
+
+.author {
+    color:#3d5af1;
+    font-weight: bold;
+}
