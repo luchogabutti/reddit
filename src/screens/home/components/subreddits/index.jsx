@@ -22,8 +22,8 @@ const Subreddits = () => {
 
     return (
         <div className="subreddits-main">
-            <h2>Subreddits</h2  >
-            {subreddits && subreddits.map(subreddit => <Subreddit key={subreddit.id} subreddit={subreddit.data}/>)}
+            <h2>Subreddits</h2>
+            {subreddits && subreddits.map(({id, data}) => <Subreddit key={id} subreddit={data}/>)}
         </div>
     )
 }
