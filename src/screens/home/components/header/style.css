@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.title p  {
+    margin-left: 10px;
+}
