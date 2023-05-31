@@ -1,0 +1,36 @@
+.subreddits {
+    background-color: #fff;
+    width: 270px;
+    text-align: left;
+    padding: 5px 10px;
+    margin: 0 15px;
+}
+
+.subreddits:hover {
+    cursor: pointer;
+    background-color: #f1ebeb;
+}
+
+.subreddit-container {
+    display: flex;
+    align-items: center;
+}
+
+.subreddit-container img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: solid #3d5af1;
+}
+
+.subreddits-main {
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    height: 2050px;
+}
+
+.subreddits-main h2 {
+    margin-left: 25px;
+}

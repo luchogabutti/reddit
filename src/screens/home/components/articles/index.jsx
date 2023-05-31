@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Article from "./Article";
 
-
 const Articles = () => {
 
     const [articles, setArticles] = useState([]);
@@ -24,7 +23,7 @@ const Articles = () => {
     }, []);
 
     return (
-        <div className="articles-container" color="secondary">
+        <div className="articles-container">
             {articles && articles.map(article => <Article key={article.id} article={article.data} />)}
         </div>
     )
