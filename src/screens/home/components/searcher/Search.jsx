@@ -1,8 +1,8 @@
 import React from "react";
 import './style.css'
-import Articles from "../articles";
 
-const Search = (props) => {
+const Search = () => {
+
     return (
         <div className="search">
             <input type="text" name="" id="" placeholder="Search"/>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Article from "./Article";
 
-const Articles = () => {
+const Articles = ({subreddit}) => {
 
     const [articles, setArticles] = useState([]);
 
     useEffect(()=> {
-    fetch(`https://www.reddit.com/.json`).then(res=>{
+    fetch(`https://www.reddit.com/r/${encodeURI(subreddit)}/new.json`).then(res=>{
         if (res.status !=200) {
         console.log('Error');
         return;
@@ -20,7 +20,7 @@ const Articles = () => {
 
     });
 
-    }, []);
+    }, [subreddit]);
 
     return (
         <div className="articles-container">
