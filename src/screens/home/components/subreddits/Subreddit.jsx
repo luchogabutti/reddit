@@ -5,10 +5,7 @@ const Subreddit = (props) => {
 
     const {title, icon_img} = props.subreddit
 
-    const handleOnClick = () => {
-        props.onClick(title.toLowerCase().replace(' ','_'))
-    }
-
+    const handleOnClick = () => props.onClick(title.toLowerCase().replace(' ','_'));
     return (
         <div className="subreddits" onClick={handleOnClick}>
             <div className="subreddit-container">
