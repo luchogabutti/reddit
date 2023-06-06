@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useCallback} from "react";
 import './style.css'
 
 const Subreddit = (props) => {
 
     const {title, icon_img} = props.subreddit
 
+    const handleOnClick = useCallback(() => props.onClick(title.toLowerCase().replace(' ','_')),[])
+
     return (
-        <div className="subreddits">
+        <div className="subreddits" onClick={handleOnClick}>
             <div className="subreddit-container">
             <img src={icon_img}/>
             <h3>{title}</h3>

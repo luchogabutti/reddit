@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Subreddit from "./Subreddit";
 
-const Subreddits = () => {
+const Subreddits = ({onChangeSubreddit}) => {
 
     const [subreddits, setSubreddit] = useState([]);
 
@@ -23,7 +23,7 @@ const Subreddits = () => {
     return (
         <div className="subreddits-main">
             <h2>Subreddits</h2>
-            {subreddits && subreddits.map(({id, data}) => <Subreddit key={id} subreddit={data}/>)}
+            {subreddits && subreddits.map(({id, data}) => <Subreddit key={id} subreddit={data} onClick={onChangeSubreddit}/>)}
         </div>
     )
 }

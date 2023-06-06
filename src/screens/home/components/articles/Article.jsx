@@ -5,7 +5,7 @@ import moment from "moment";
 
 const Article = (props) => {
 
-    const { title, created_utc, author, num_comments, url, permalink } = props.article;
+    const { title, created_utc, subreddit, num_comments, url, permalink } = props.article;
 
     return (
         <div className="articles">
@@ -15,7 +15,7 @@ const Article = (props) => {
             <img src={url} alt=" "/>
 
             <div className="article-props">
-                <span className="author">{author}</span>
+                <span className="author">{subreddit}</span>
                 <p>{moment.unix(created_utc).fromNow()}</p>
                 <span>
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" class="icon-action" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
