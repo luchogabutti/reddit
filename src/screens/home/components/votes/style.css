@@ -1,0 +1,21 @@
+.green-btn {
+    color: rgb(69, 184, 31);
+}
+
+.red-btn {
+    color: rgb(255, 48, 79);
+}
+
+
+
+.red-state {
+    background-color: rgb(255, 48, 79) ;
+}
+
+.green-state {
+    background-color:rgb(69, 184, 31);
+}
+
+.white-state {
+    background-color: #fff;
+}
