@@ -9,9 +9,8 @@ const Home = () => {
 
     const [subreddit, setSubreddit] = useState('home');
 
-
     return  (
-        <>
+        <>  
             <Header />
             <div className="main">
                 <Articles subreddit={subreddit}/>
