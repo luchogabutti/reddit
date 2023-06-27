@@ -5,7 +5,6 @@ const UP =  'up';
 const DOWN = 'down';
 
 const Votes = (props) => {
-    console.count('render')
     const [status, setStatus] = useState();
 
     const handleClickUp = useCallback(() => {
