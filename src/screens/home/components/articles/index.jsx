@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
+import InfiniteScroll from "react-infinite-scroll-component"
 import Article from "./Article";
 
 const Articles = ({subreddit}) => {
 
     const [articles, setArticles] = useState([]);
-
     useEffect(()=> {
-    fetch(`https://www.reddit.com/r/${encodeURI(subreddit)}/new.json`).then(res=>{
+    console.log(fetch(`https://www.reddit.com/r/${encodeURI(subreddit)}/new.json?limit=3`).then(res=>{
         if (res.status !=200) {
         console.log('Error');
         return;
@@ -18,14 +18,26 @@ const Articles = ({subreddit}) => {
             }
         })
 
-    });
+    }));
 
-    }, [subreddit]);
+    }, [subreddit])
+
+    const fetchData = () => {
+        if (articles.after == null) {
+            setArticles(articles.length = articles.lengh + 3)
+        }
+    }
 
     return (
-        <div className="articles-container">
-            {articles && articles.map(article => <Article key={article.id} article={article.data} />)}
-        </div>
+        <InfiniteScroll
+            dataLength={articles.length}
+            next={fetchData}
+            hasMore={true}
+            loader={<h4>Loading...</h4>}>
+            <div className="articles-container">
+                {articles && articles.map(article => <Article key={article.id} article={article.data} />)}
+            </div>
+        </InfiniteScroll>
     )
 }
 
