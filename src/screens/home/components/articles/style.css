@@ -39,3 +39,44 @@
     color:#3d5af1;
     font-weight: bold;
 }
+
+.color {
+    color: #3d5af1;
+}
+ .color:hover {
+    cursor: pointer;
+    background-color: rgb(228, 222, 222) ;
+ }
+
+.no-color {
+    background: #fff;
+}
+
+.no-color:hover {
+    cursor: pointer;
+    background-color: rgb(228, 222, 222) ;
+}
+
+.visible {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hidden {
+    display: none;
+}
+
+.comment-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments {
+    background-color: #f1eded;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    padding: 5px;
+}
