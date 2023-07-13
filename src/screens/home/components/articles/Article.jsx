@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { getComments } from "../../../../mockComentService";
 import './style.css';
 import moment from "moment";
@@ -22,9 +22,9 @@ const Article = ({ article }) => {
         fetchComments();
       }, []);
 
-    const handleClick = () => {
+    const handleClick = useCallback( () => {
         setActive(!active)
-    }
+    }, [active])
 
     return (
         <div className="articles">
